@@ -1,0 +1,26 @@
+.header{
+    height: 80px;
+    background-color: $topheader;
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        &-logo{
+            color: $color-white;
+        }
+        &-list{
+            display: flex;
+            @include breakpoint(767) { 
+                flex-wrap: wrap;
+                @include single-transition(red, 1s, ease-in-out, 0s);
+            }
+            .list__item{
+                padding-left: 20px;
+                &-link{
+                   color: $color-white;
+                }
+            }
+        }
+    }
+}
